@@ -1,0 +1,379 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.6s;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+h2{
+    margin-top: 0;
+    font-size: 30px;
+}
+
+img{
+    max-width:100%;  
+}
+
+p{
+    line-height: 1.5;
+}
+
+
+/*-------------------- header -------------------*/
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+.logo{
+    width: 150px;
+}
+
+nav a {
+    color: #131313;
+    padding: 15px;
+}
+
+nav a:hover {
+    background-color:orangered;
+    color: white;
+}
+.btn1{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+
+}
+
+.btn1:hover{
+    opacity: 80%;
+}
+
+
+
+/*----------------- Sections ------------------*/
+
+
+
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+.row{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex:250px;
+    padding: 15px;
+    margin: 10px;
+}
+
+
+
+/*----------------- Hero section ------------------*/
+
+
+.hero{
+    background-image:url(../images/page-header.jpg);
+    background-size: cover;
+    min-height: 80vh;
+    place-content: center;
+    color: white;
+    animation: bgup 3s forwards;
+
+
+}
+
+.title1{
+    text-align: center;
+    padding: 15px;
+}
+.hero h1{
+    font-size: 42px;
+}
+
+.btn2{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+
+}
+
+.btn2:hover{
+    background-color:rgb(255, 205, 187);
+}
+
+
+/*----------------- About section ------------------*/
+
+
+
+.about .row .col p{
+    margin-bottom: 40px;
+}
+
+.btn3{
+    background-color: orangered;
+    color: white;
+    border-radius: 2px;
+    padding: 10px 20px;
+
+}
+
+.btn3:hover{
+    background-color:rgb(255, 205, 187);
+}
+
+
+
+/*--------------- Service section ------------------*/
+
+
+
+.service{
+    background-image: url(../images/bg-dots.png);
+    background-color: #f1f1f1;
+    
+}
+
+
+
+/*--------------- Counter section ------------------*/
+
+
+
+.counter{
+    background-image: url(../images/counter-bg.jpg);
+    text-align: center;
+    color: #f1f1f1;
+}
+
+
+.counter h2{
+    color: orangered;
+}
+
+
+
+
+/*--------------- Team section ------------------*/
+
+.team{
+    text-align: center;
+
+}
+
+
+.team .col{
+    transition: 0.6s;
+}
+.team h3{
+    transition: 0.3s;
+    margin-bottom: -10px;
+    
+}
+
+
+
+.team .col:hover{
+    transform: scale(1.1);
+    color: orangered;
+}
+
+
+
+/*--------------- Sponsor section ------------------*/
+
+.sponsor{
+    background-image: url(../images/bg-dots.png);
+    background-color: #f1f1f1;
+}
+
+.sponsor .row{
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.sponsor img{
+    opacity: 70%;
+    transition: 0.5s;
+    animation: scroll 15s linear infinite;
+}
+
+.sponsor img:hover{
+    opacity: 100%;
+    transform: scale(1.1);
+}
+
+
+
+
+/*--------------- footer section ------------------*/
+
+
+footer{
+    background-color: #333;
+    color: #dddddd;
+    padding-top: 40px;
+}
+footer h3{
+    color: #ffffff;
+}
+
+footer  a{
+    color: #dddddd;
+    display: block;
+    margin-bottom: 15px;
+}
+
+footer  a:hover{
+    color: #929292;
+    transform: scale(1.1);
+}
+
+.copy{
+   padding: 5px; 
+   margin-top: 30px;
+   text-align: center;
+   border-top: 1px solid rgb(101, 101, 101);
+}
+
+
+.uparrow{
+    position: fixed;
+    right: 30px;
+    bottom: 70px;
+    animation: shake 3s infinite;
+}
+
+.whtsapp{
+    position: fixed;
+    left: 30px;
+    bottom: 70px;
+    animation: bounce 2s infinite;
+}
+
+
+
+
+/*------------ keyframes animations -------------*/
+
+
+@keyframes shake{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(15px);}
+    100%{transform: translateY(0);}
+}
+
+@keyframes bounce{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+@keyframes scroll{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-600%);}
+}
+
+@keyframes bgup{
+    0%{background-position: top;}
+    100%{background-position: center;}
+}
+
+
+
+/* ------------media querry for tablet------------- */
+
+
+
+@media (min-width:501px) and (max-width:850px){
+
+    header{
+        padding: 10px 2%;
+    }
+
+    .logo{
+        width: 100px;
+    }
+
+    nav a{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .about .row{
+        flex-direction: column;
+    }
+
+    .uparrow{
+        bottom: 50px;
+    }
+    
+    .whtsapp{
+        bottom: 50px;
+    }
+
+    .copy{
+        padding: 1px;
+        margin-top: 30px;
+    }
+
+
+}
+
+
+
+/* ------------media querry for mobile------------- */
+
+
+@media (max-width:500px){
+
+    header {
+        flex-direction: column;
+        position: static;
+    }
+
+    nav a{
+        display: block;
+        text-align: center;
+    }
+
+    .uparrow{
+        bottom: 40px;
+        width: 40px;
+    }
+    
+    .whtsapp{
+        bottom: 30px;
+        width: 35px;
+    }
+
+    .copy{
+        font-size: 10px;
+    }
+
+
+}
